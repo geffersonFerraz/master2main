@@ -36,7 +36,7 @@ def main():
     logIt("JUST_TRY_WITH = "+str(xJustTryWithIdProject))
 
     global xJustTryWithOneProject
-    xJustTryWithOneProject = os.environ.get('JUST_TRY_ONE')
+    xJustTryWithOneProject = json.loads(os.environ.get('JUST_TRY_ONE').lower())
     logIt("JUST_TRY_ONE = "+str(xJustTryWithOneProject))
 
     global cPrivateToken
@@ -143,6 +143,7 @@ def checkProjects():
     for i in range(len(vListProjects)):
 
         getBranchMain = getBranch(vListProjects[i])
+        global xJustTryWithOneProject
         if xJustTryWithOneProject:
             whileStr ='You were given the option to change only one project. So, see what is: ' + str(vListProjects[i].id) + ' - '+ vListProjects[i].name +'. Press ENTER to continue.'
             logIt(whileStr)
