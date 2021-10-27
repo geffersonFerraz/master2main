@@ -144,7 +144,7 @@ def checkProjects():
 
         getBranchMain = getBranch(vListProjects[i])
         if xJustTryWithOneProject:
-            whileStr ='You were given the option to change only one project. So, see what is: ' + str(vListProjects[i].id) + ' - '+ vListProjects[i].name +'. Press any key to continue.'
+            whileStr ='You were given the option to change only one project. So, see what is: ' + str(vListProjects[i].id) + ' - '+ vListProjects[i].name +'. Press ENTER to continue.'
             logIt(whileStr)
             while input(whileStr)  != "":
                 break
