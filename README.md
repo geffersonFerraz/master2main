@@ -5,7 +5,7 @@
 # PRÉ Run: 
   pip install -r requirements.txt
   
-  cp .env-example .env
+  cp .env.example .env
 
 # Change .env:
   PRIVATE_TOKEN= Generate a personal token at https://gitlab.xpto.com/-/profile/personal_access_tokens with that permissions: api, read_user, read_api, read_repository, write_repository
